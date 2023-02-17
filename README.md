@@ -28,3 +28,4 @@ https://steamcommunity.com/app/682130/discussions/0/1729837292625897852/
 # Want to expand my github:
 
 - post your raw data into issues area
+- https://github.com/augesrob/dbm-rawdata-2.0/issues
