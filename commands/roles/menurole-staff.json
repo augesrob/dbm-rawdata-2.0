@@ -1,0 +1,639 @@
+{
+  "name": "Menurole-staff",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "4",
+  "_id": "WrUSl",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [
+        {
+          "name": "Channel Staff Chat",
+          "type": "PRIMARY",
+          "id": "msg-button-1001z",
+          "row": "",
+          "url": "",
+          "emoji": "🚮",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "member": "1",
+              "varName": "",
+              "role": "100",
+              "varName2": "Channel Staff Chat",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "2",
+                "iffalseVal": "5"
+              },
+              "name": "Check If Member has Role"
+            },
+            {
+              "member": "1",
+              "varName2": "",
+              "role": "100",
+              "varName": "Channel Staff Chat",
+              "reason": "",
+              "name": "Remove Member Role"
+            },
+            {
+              "channel": "1",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Channel Staff Chat Role",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                  "description": "Channel Staff Chat Role Was Removed from your account",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "member": "1",
+              "varName2": "",
+              "role": "100",
+              "varName": "Channel Staff Chat",
+              "reason": "",
+              "name": "Add Member Role"
+            },
+            {
+              "channel": "1",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Channel Staff Chat Role",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                  "description": "Channel Staff Chat Role Was Added to your account",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            }
+          ]
+        },
+        {
+          "name": "Channel Staff Flight",
+          "type": "PRIMARY",
+          "id": "msg-button-1002z",
+          "row": "",
+          "url": "",
+          "emoji": "🚮",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "member": "1",
+              "varName": "",
+              "role": "100",
+              "varName2": "Channel Staff Flight",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "2",
+                "iffalseVal": "5"
+              },
+              "name": "Check If Member has Role"
+            },
+            {
+              "member": "1",
+              "varName2": "",
+              "role": "100",
+              "varName": "Channel Staff Flight",
+              "reason": "",
+              "name": "Remove Member Role"
+            },
+            {
+              "channel": "1",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Channel Staff Flight Role",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                  "description": "Channel Staff Flight Was Removed from your account",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "member": "1",
+              "varName2": "",
+              "role": "100",
+              "varName": "Channel Staff Flight",
+              "reason": "",
+              "name": "Add Member Role"
+            },
+            {
+              "channel": "1",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Channel Staff Flight Role",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                  "description": "Channel Staff Flight Role Was Added to your account",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            }
+          ]
+        },
+        {
+          "name": "Channel Flagged Words",
+          "type": "PRIMARY",
+          "id": "msg-button-1003z",
+          "row": "",
+          "url": "",
+          "emoji": "🚮",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "member": "1",
+              "varName": "",
+              "role": "100",
+              "varName2": "Channel Flagged Words",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "2",
+                "iffalseVal": "5"
+              },
+              "name": "Check If Member has Role"
+            },
+            {
+              "member": "1",
+              "varName2": "",
+              "role": "100",
+              "varName": "Channel Flagged Words",
+              "reason": "",
+              "name": "Remove Member Role"
+            },
+            {
+              "channel": "1",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Channel Flagged Words Role",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                  "description": "Channel Flagged Words Role Was Removed from your account",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "member": "1",
+              "varName2": "",
+              "role": "100",
+              "varName": "Channel Flagged Words",
+              "reason": "",
+              "name": "Add Member Role"
+            },
+            {
+              "channel": "1",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Channel Flagged Words Role",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                  "description": "Channel Flagged Words Role Was Added to your account",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            }
+          ]
+        },
+        {
+          "name": "Channel AntiCheat",
+          "type": "PRIMARY",
+          "id": "msg-button-1004z",
+          "row": "",
+          "url": "",
+          "emoji": "🚮",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "member": "1",
+              "varName": "",
+              "role": "100",
+              "varName2": "Channel AntiCheat",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "2",
+                "iffalseVal": "5"
+              },
+              "name": "Check If Member has Role"
+            },
+            {
+              "member": "1",
+              "varName2": "",
+              "role": "100",
+              "varName": "Channel AntiCheat",
+              "reason": "",
+              "name": "Remove Member Role"
+            },
+            {
+              "channel": "1",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Channel AntiCheat Role",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                  "description": "Channel AntiCheat Role Was Removed from your account",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "member": "1",
+              "varName2": "",
+              "role": "100",
+              "varName": "Channel AntiCheat",
+              "reason": "",
+              "name": "Add Member Role"
+            },
+            {
+              "channel": "1",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Channel AntiCheat Role",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                  "description": "Channel AntiCheat Role Was Added to your account",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            }
+          ]
+        },
+        {
+          "name": "Channel  Misc",
+          "type": "PRIMARY",
+          "id": "msg-button-1005z",
+          "row": "",
+          "url": "",
+          "emoji": "🚮",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "member": "1",
+              "varName": "",
+              "role": "100",
+              "varName2": "Channel  Misc",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "2",
+                "iffalseVal": "5"
+              },
+              "name": "Check If Member has Role"
+            },
+            {
+              "member": "1",
+              "varName2": "",
+              "role": "100",
+              "varName": "Channel  Misc",
+              "reason": "",
+              "name": "Remove Member Role"
+            },
+            {
+              "channel": "1",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Channel  Misc Role",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                  "description": "Channel  Misc Role Was Removed from your account",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "member": "1",
+              "varName2": "",
+              "role": "100",
+              "varName": "Channel  Misc",
+              "reason": "",
+              "name": "Add Member Role"
+            },
+            {
+              "channel": "1",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Channel  Misc Role",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                  "description": "Channel  Misc Role Was Added to your account",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Staff Role Menu",
+          "url": "",
+          "color": "8b00ff",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+          "description": "",
+          "fields": [
+            {
+              "name": "Want to add / remove role?",
+              "value": "Pressing a button below will add / remove a role in discord\n",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "Copyright 2022-2023",
+          "footerIconUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Change Roles Within Discord"
+}
