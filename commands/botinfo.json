@@ -1,0 +1,235 @@
+{
+  "name": "Botinfo",
+  "permissions": "NONE",
+  "restriction": "0",
+  "_id": "LzXoq",
+  "actions": [
+    {
+      "info": "0",
+      "find": "902234112503451675",
+      "storage": "1",
+      "varName": "cloverkingdomteam",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "role": "3",
+      "varName2": "cloverkingdomteam",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "31"
+      },
+      "name": "Check If Member has Role"
+    },
+    {
+      "info": "3",
+      "storage": "1",
+      "varName2": "guildamount",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "4",
+      "storage": "1",
+      "varName2": "useramount",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "10",
+      "storage": "1",
+      "varName2": "channelamount",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "11",
+      "storage": "1",
+      "varName2": "emojiamount",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "32",
+      "storage": "1",
+      "varName2": "commandamount",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "33",
+      "storage": "1",
+      "varName2": "eventamount",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "9",
+      "storage": "1",
+      "varName2": "voiceconnectionsamount",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "28",
+      "storage": "1",
+      "varName2": "botos",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "29",
+      "storage": "1",
+      "varName2": "CPUusageMB",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "35",
+      "storage": "1",
+      "varName2": "CPUCoreAmount",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "36",
+      "storage": "1",
+      "varName2": "TotalMemoryGB",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "37",
+      "storage": "1",
+      "varName2": "TotalMemoryMB",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "38",
+      "storage": "1",
+      "varName2": "AvailableMemoryGB",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "39",
+      "storage": "1",
+      "varName2": "AvailableMemoryMB",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "40",
+      "storage": "1",
+      "varName2": "AvailableMemory%",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "41",
+      "storage": "1",
+      "varName2": "UsedMemoryGB",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "42",
+      "storage": "1",
+      "varName2": "UsedMemoryMB",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "43",
+      "storage": "1",
+      "varName2": "UsedMemory%",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "2",
+      "storage": "1",
+      "varName2": "Ping",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "5",
+      "storage": "1",
+      "varName2": "PingRounded",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "21",
+      "storage": "1",
+      "varName2": "discordjsversion",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "31",
+      "storage": "1",
+      "varName2": "nodejsversion",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "23",
+      "storage": "1",
+      "varName2": "udays",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "24",
+      "storage": "1",
+      "varName2": "uhours",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "25",
+      "storage": "1",
+      "varName2": "umins",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "26",
+      "storage": "1",
+      "varName2": "usecs",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Clover Kingdom - Core",
+          "url": "",
+          "color": "",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+          "description": "",
+          "fields": [
+            {
+              "name": "Bot Information",
+              "value": "Guild Amount: ${tempVars(\"guildamount\")}\nUser Amount: ${tempVars(\"useramount\")}\nChannel Amount: ${tempVars(\"channelamount\")}\nEmoji Amount: ${tempVars(\"emojiamount\")}\nCommand Amount: ${tempVars(\"commandamount\")}\nEvent Amount: ${tempVars(\"eventamount\")}\nVoice Connections: ${tempVars(\"voiceconnectionsamount\")}\nBot OS: ${tempVars(\"botos\")}\nCPU Usage in MB: ${tempVars(\"CPUusageMB\")}\nCPU Core Count: ${tempVars(\"CPUCoreAmount\")}\nTotal Memory GB: ${tempVars(\"TotalMemoryGB\")}\nTotal Memory MB: ${tempVars(\"TotalMemoryMB\")}\nAvailable Memory GB: ${tempVars(\"AvailableMemoryGB\")}\nAvailable Memory MB: ${tempVars(\"AvailableMemoryMB\")}\nAvailable Memory %: ${tempVars(\"AvailableMemory%\")}\nUsed Memory GB: ${tempVars(\"UsedMemoryGB\")}\nUsed Memory MB: ${tempVars(\"UsedMemoryMB\")}\nUsed Memory %: ${tempVars(\"UsedMemory%\")}\nPing: ${tempVars(\"Ping\")} ms\nRounded Ping: ${tempVars(\"PingRounded\")} ms\nDiscordJS Version: ${tempVars(\"discordjsversion\")}\nNodeJS Version: ${tempVars(\"nodejsversion\")}\nUptime: ${tempVars(\"udays\")}d : ${tempVars(\"uhours\")}h : ${tempVars(\"umins\")}m : ${tempVars(\"usecs\")}s",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "source": "RDyOJ",
+      "type": "false",
+      "name": "Call Command/Event"
+    }
+  ],
+  "_aliases": [],
+  "comType": "4",
+  "description": "Clover Kingdom - Core Bot Information"
+}
