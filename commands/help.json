@@ -1,0 +1,393 @@
+{
+  "name": "help",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "JgWfJ",
+  "actions": [
+    {
+      "storage": "4",
+      "varName": "RoleList",
+      "branches": [
+        {
+          "comparison": "1",
+          "value": "Staff",
+          "actions": [
+            {
+              "info": "0",
+              "find": "902234112503451675",
+              "storage": "1",
+              "varName": "cloverkingdomteam",
+              "name": "Find Role"
+            },
+            {
+              "member": "1",
+              "varName": "",
+              "role": "3",
+              "varName2": "cloverkingdomteam",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "2",
+                "iffalseVal": "5"
+              },
+              "name": "Check If Member has Role"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Staff Help Menu",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                  "description": "",
+                  "fields": [
+                    {
+                      "name": "/Poll",
+                      "value": "Create a poll",
+                      "inline": "false"
+                    },
+                    {
+                      "name": "/Clear",
+                      "value": "Clear up to 100 lines of chat",
+                      "inline": "false"
+                    },
+                    {
+                      "name": "/Giveaway",
+                      "value": "Start a giveaway",
+                      "inline": "false"
+                    },
+                    {
+                      "name": "/Roleinfo",
+                      "value": "See the infomation based on a role",
+                      "inline": "false"
+                    },
+                    {
+                      "name": "/ServerInfo",
+                      "value": "See the discord information",
+                      "inline": "false"
+                    },
+                    {
+                      "name": "/Botinfo",
+                      "value": "See information about a bot",
+                      "inline": "false"
+                    },
+                    {
+                      "name": "/Userinfo",
+                      "value": "See the information about a given user",
+                      "inline": "false"
+                    }
+                  ],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "source": "RDyOJ",
+              "type": "false",
+              "name": "Call Command/Event"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "Public",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Public Help Menu",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                  "description": "",
+                  "fields": [
+                    {
+                      "name": "/Help",
+                      "value": "Select which help menu to open",
+                      "inline": "false"
+                    },
+                    {
+                      "name": "/Weather",
+                      "value": "See weather anywhere in the world",
+                      "inline": "false"
+                    },
+                    {
+                      "name": "/Ping",
+                      "value": "Check the lag between you and this discord bot",
+                      "inline": "false"
+                    },
+                    {
+                      "name": "/Fact",
+                      "value": "See a random Fact",
+                      "inline": "false"
+                    },
+                    {
+                      "name": "/CoinToss",
+                      "value": "Toss a coin to see heads or tails",
+                      "inline": "false"
+                    },
+                    {
+                      "name": "/Chucknorris",
+                      "value": "See a random Chuck Norris joke",
+                      "inline": "false"
+                    },
+                    {
+                      "name": "/Dice",
+                      "value": "Roll a dice and see what you get",
+                      "inline": "false"
+                    }
+                  ],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "Donator",
+          "actions": [
+            {
+              "info": "0",
+              "find": "1051887297878048844",
+              "storage": "1",
+              "varName": "vip",
+              "name": "Find Role"
+            },
+            {
+              "info": "0",
+              "find": "902249071249616927",
+              "storage": "1",
+              "varName": "serverboost",
+              "name": "Find Role"
+            },
+            {
+              "member": "1",
+              "varName": "",
+              "role": "3",
+              "varName2": "vip",
+              "branch": {
+                "iftrue": "2",
+                "iffalse": "2",
+                "iftrueVal": "5",
+                "iffalseVal": "4"
+              },
+              "name": "Check If Member has Role"
+            },
+            {
+              "member": "1",
+              "varName": "",
+              "role": "3",
+              "varName2": "serverboost",
+              "branch": {
+                "iftrue": "2",
+                "iffalse": "2",
+                "iftrueVal": "5",
+                "iffalseVal": "7"
+              },
+              "name": "Check If Member has Role"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Donator Help Menu",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                  "description": "",
+                  "fields": [
+                    {
+                      "name": "/Avatar",
+                      "value": "See anyones avatar in large scale allows you to download the image",
+                      "inline": "false"
+                    }
+                  ],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "source": "iVAWg",
+              "type": "false",
+              "name": "Call Command/Event"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "Linked",
+          "actions": [
+            {
+              "info": "0",
+              "find": "949779762115674122",
+              "storage": "1",
+              "varName": "linked",
+              "name": "Find Role"
+            },
+            {
+              "member": "1",
+              "varName": "",
+              "role": "3",
+              "varName2": "linked",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "2",
+                "iffalseVal": "5"
+              },
+              "name": "Check If Member has Role"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Linked Help Menu",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                  "description": "",
+                  "fields": [
+                    {
+                      "name": "/apply",
+                      "value": "Once you linked you discord to minecraft you can apply for a rank",
+                      "inline": "false"
+                    }
+                  ],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "source": "cvUJm",
+              "type": "false",
+              "name": "Call Command/Event"
+            }
+          ]
+        }
+      ],
+      "name": "Multi-Check Variable"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "RoleList",
+      "description": "Select an option",
+      "type": "STRING",
+      "required": true,
+      "choices": [
+        {
+          "name": "staff",
+          "value": "Staff"
+        },
+        {
+          "name": "public",
+          "value": "Public"
+        },
+        {
+          "name": "donator",
+          "value": "Donator"
+        },
+        {
+          "name": "linked",
+          "value": "Linked"
+        }
+      ]
+    }
+  ],
+  "description": "Custom Help Menu"
+}
