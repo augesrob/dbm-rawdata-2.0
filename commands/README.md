@@ -1,4 +1,4 @@
 # Commands:
 
-- This is where ill psot commands
+- This is where ill post commands
 
