@@ -1,0 +1,383 @@
+{
+  "name": "Giveaway",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "oNwet",
+  "actions": [
+    {
+      "info": "0",
+      "find": "902234112503451675",
+      "storage": "1",
+      "varName": "cloverkingdomteam",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "role": "3",
+      "varName2": "cloverkingdomteam",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "15"
+      },
+      "name": "Check If Member has Role"
+    },
+    {
+      "storage": "1",
+      "varName": "winners",
+      "name": "Create List"
+    },
+    {
+      "FirstNumber": "${slashParams(\"time\")}",
+      "info": "2",
+      "SecondNumber": "3600",
+      "storage": "1",
+      "varName": "time_in_seconds",
+      "name": "Basic Math Operation"
+    },
+    {
+      "info": "0",
+      "find": "902234112486686762",
+      "storage": "1",
+      "varName": "notif",
+      "name": "Find Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"notif\")}",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "notif",
+      "name": "Send Message"
+    },
+    {
+      "message": "1",
+      "varName": "notif",
+      "info": "16",
+      "storage": "1",
+      "varName2": "message_date",
+      "name": "Store Message Info"
+    },
+    {
+      "date": "${tempVars(\"message_date\")}",
+      "info": "2",
+      "storage": "1",
+      "varName": "timestamp",
+      "name": "Store Date Info"
+    },
+    {
+      "FirstNumber": "${tempVars(\"timestamp\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"time_in_seconds\")}",
+      "storage": "1",
+      "varName": "final_timestamp",
+      "name": "Basic Math Operation"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [
+        {
+          "name": "Entry",
+          "type": "PRIMARY",
+          "id": "msg-button-77844b9",
+          "row": "",
+          "url": "",
+          "emoji": "🎉",
+          "mode": "MULTI",
+          "time": "",
+          "actions": [
+            {
+              "comment": "Don't forget to setup ROLE ID under this",
+              "color": "#ff0000",
+              "name": "Comment"
+            },
+            {
+              "member": "1",
+              "varName": "",
+              "role": "101",
+              "varName2": "902234112486686762",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "4",
+                "iffalseVal": "1"
+              },
+              "name": "Check If Member has Role"
+            },
+            {
+              "member": "1",
+              "varName": "",
+              "info": "21",
+              "storage": "1",
+              "varName2": "button_user_tag",
+              "name": "Store Member Info"
+            },
+            {
+              "storage": "1",
+              "varName": "winners",
+              "addType": "0",
+              "position": "",
+              "value": "tempVars(\"button_user_tag\")",
+              "name": "Add Item to List"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Congratulation ${member}\n\nYou sucessfully take place into this giveaway.",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": true,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "anchorName": "1",
+              "name": "Action Anchor"
+            },
+            {
+              "comment": "Don't forget to setup ROLE ID under this",
+              "color": "#ff0000",
+              "name": "Comment"
+            },
+            {
+              "info": "0",
+              "find": "902234112486686762",
+              "storage": "1",
+              "varName": "required_role",
+              "name": "Find Role"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Error",
+                  "url": "",
+                  "color": "ff6666",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Sorry ${member},\n\nYou need to have ${tempVars(\"required_role\")} role to entry.",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": true,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Giveaway Started !",
+          "url": "",
+          "color": "59ADC8",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "🌟 **Giveaway Created!**\nPrize: ${slashParams(\"Prize\")}\n\n📢 Created by: ${member}\n🔜 Ends in <t:${tempVars(\"final_timestamp\")}:R>",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "giveawaymsg",
+      "name": "Send Message"
+    },
+    {
+      "time": "${slashParams(\"time\")}",
+      "measurement": "3",
+      "name": "Wait"
+    },
+    {
+      "list": "7",
+      "varName": "winners",
+      "getType": "2",
+      "position": "",
+      "storage": "1",
+      "varName2": "pseudo_winner",
+      "name": "Get Item from List"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [
+        {
+          "name": "Entry",
+          "type": "PRIMARY",
+          "id": "msg-button-d2accf0",
+          "row": "",
+          "url": "",
+          "emoji": "🎉",
+          "mode": "MULTI",
+          "time": "${tempVars(\"time_in_seconds\")}",
+          "actions": [
+            {
+              "comment": "Don't forget to setup ROLE ID under this",
+              "color": "#ff0000",
+              "name": "Comment"
+            },
+            {
+              "member": "1",
+              "varName": "",
+              "role": "101",
+              "varName2": "902234112486686762",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "1"
+              },
+              "name": "Check If Member has Role"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Congratulation ${member}\n\nYou sucessfully take place into this giveaway.",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": true,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "member": "1",
+              "varName": "",
+              "info": "21",
+              "storage": "1",
+              "varName2": "button_user_tag",
+              "name": "Store Member Info"
+            },
+            {
+              "storage": "1",
+              "varName": "winners",
+              "addType": "0",
+              "position": "",
+              "value": "tempVars(\"button_user_tag\")",
+              "name": "Add Item to List"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Giveaway ended !",
+          "url": "",
+          "color": "59ADC8",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "🌟 **Giveaway ended!**\nPrize: ${slashParams(\"Prize\")}\n\nWinner :\n- `${tempVars(\"pseudo_winner\")}`",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "1",
+      "editMessageVarName": "giveawaymsg",
+      "storage": "0",
+      "varName2": "giveawaymsg",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "source": "RDyOJ",
+      "type": "false",
+      "name": "Call Command/Event"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "prize",
+      "description": "Type here the price you want to give",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "time",
+      "description": "Duration of the giveaway (in Hours)",
+      "type": "INTEGER",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Giveaway Win Stuff"
+}
