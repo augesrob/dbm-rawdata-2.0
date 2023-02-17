@@ -1,0 +1,2541 @@
+
+{
+  "name": "Apply",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "ESeQD",
+  "actions": [
+    {
+      "info": "0",
+      "find": "949779762115674122",
+      "storage": "1",
+      "varName": "linked",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "role": "3",
+      "varName2": "linked",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "9"
+      },
+      "name": "Check If Member has Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "3",
+      "varName2": "userdisplayname",
+      "name": "Store Member Info"
+    },
+    {
+      "channelName": "${globalVars(\"userdisplayname\")} - JobBoard",
+      "topic": "${member.displayName} - JobBoard",
+      "position": "",
+      "storage": "1",
+      "varName": "jobboardchannel",
+      "categoryID": "1074566756384919562",
+      "reason": "",
+      "name": "Create Text Channel"
+    },
+    {
+      "channel": "3",
+      "varName": "jobboardchannel",
+      "member": "1",
+      "varName2": "",
+      "permission": "VIEW_CHANNEL",
+      "state": "0",
+      "reason": "",
+      "name": "Set Member Channel Perms"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${globalVars(\"userdisplayname\")} ${tempVars(\"jobboardchannel\")} Go here to start your application.",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "5",
+      "varName": "jobboardchannel",
+      "message": "",
+      "buttons": [
+        {
+          "name": "Discord Helper",
+          "type": "PRIMARY",
+          "id": "msg-button-1c9b943",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "${tempVars(\"discordhelper\")}",
+              "message": "",
+              "buttons": [
+                {
+                  "name": "Question 1",
+                  "type": "PRIMARY",
+                  "id": "msg-button-f578c38",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": [
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Question 1",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "You have 1 Minute until this command times out",
+                          "fields": [
+                            {
+                              "name": "Type in chat to respond",
+                              "value": "Why do you want to be a discord helper",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    },
+                    {
+                      "storage": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "filter": "content.length > 0 && author.id === user.id",
+                      "max": "1",
+                      "time": "60000",
+                      "iftrue": "1",
+                      "iftrueVal": "",
+                      "iffalse": "0",
+                      "iffalseVal": "",
+                      "storage2": "2",
+                      "varName2": "question1",
+                      "name": "Await Response Call Action"
+                    },
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Application Timed Out",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "Select the button you again if you want to keep going.",
+                          "fields": [
+                            {
+                              "name": "Timed Out",
+                              "value": "1 Minute has passed and we timed out the application",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                },
+                {
+                  "name": "Question 2",
+                  "type": "PRIMARY",
+                  "id": "msg-button-efc6bbb",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": [
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Question 2",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "You have 1 Minute until this command times out",
+                          "fields": [
+                            {
+                              "name": "Type in chat to respond",
+                              "value": "What can we expect from you as a discord helper?",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    },
+                    {
+                      "storage": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "filter": "content.length > 0 && author.id === user.id",
+                      "max": "1",
+                      "time": "60000",
+                      "iftrue": "1",
+                      "iftrueVal": "",
+                      "iffalse": "0",
+                      "iffalseVal": "",
+                      "storage2": "2",
+                      "varName2": "question2",
+                      "name": "Await Response Call Action"
+                    },
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Application Timed Out",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "Select the button you again if you want to keep going.",
+                          "fields": [
+                            {
+                              "name": "Timed Out",
+                              "value": "1 Minute has passed and we timed out the application",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                },
+                {
+                  "name": "Question 3",
+                  "type": "PRIMARY",
+                  "id": "msg-button-e63de41",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": [
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Question 3",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "You have 1 Minute until this command times out",
+                          "fields": [
+                            {
+                              "name": "Type in chat to respond",
+                              "value": "Do you understand the job that could be given to you?",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    },
+                    {
+                      "storage": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "filter": "content.length > 0 && author.id === user.id",
+                      "max": "1",
+                      "time": "60000",
+                      "iftrue": "1",
+                      "iftrueVal": "",
+                      "iffalse": "0",
+                      "iffalseVal": "",
+                      "storage2": "2",
+                      "varName2": "question3",
+                      "name": "Await Response Call Action"
+                    },
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Application Timed Out",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "Select the button you again if you want to keep going.",
+                          "fields": [
+                            {
+                              "name": "Timed Out",
+                              "value": "1 Minute has passed and we timed out the application",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                },
+                {
+                  "name": "Question 4",
+                  "type": "PRIMARY",
+                  "id": "msg-button-452d302",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": [
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Question 4",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "You have 1 Minute until this command times out",
+                          "fields": [
+                            {
+                              "name": "Type in chat to respond",
+                              "value": "What would you do if something happend and you could not control the issue?",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    },
+                    {
+                      "storage": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "filter": "content.length > 0 && author.id === user.id",
+                      "max": "1",
+                      "time": "60000",
+                      "iftrue": "1",
+                      "iftrueVal": "",
+                      "iffalse": "0",
+                      "iffalseVal": "",
+                      "storage2": "2",
+                      "varName2": "question4",
+                      "name": "Await Response Call Action"
+                    },
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Application Timed Out",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "Select the button you again if you want to keep going.",
+                          "fields": [
+                            {
+                              "name": "Timed Out",
+                              "value": "1 Minute has passed and we timed out the application",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                },
+                {
+                  "name": "Review Application",
+                  "type": "PRIMARY",
+                  "id": "msg-button-dbd78e4",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": [
+                    {
+                      "channel": "0",
+                      "varName": "",
+                      "message": "",
+                      "buttons": [
+                        {
+                          "name": "Submit Application",
+                          "type": "PRIMARY",
+                          "id": "msg-button-e5b6081",
+                          "row": "",
+                          "url": "",
+                          "emoji": "",
+                          "mode": "PERSISTENT",
+                          "time": "",
+                          "actions": [
+                            {
+                              "channelName": " ${globalVars(\"userdisplayname\")}  - Application",
+                              "topic": "",
+                              "position": "",
+                              "storage": "1",
+                              "varName": "newapplicationchannel",
+                              "categoryID": "1075294215162044436",
+                              "reason": "",
+                              "name": "Create Text Channel"
+                            },
+                            {
+                              "channel": "5",
+                              "varName": "newapplicationchannel",
+                              "message": "",
+                              "buttons": [],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [
+                                {
+                                  "title": "Discord Helper Application",
+                                  "url": "",
+                                  "color": "",
+                                  "timestamp": "false",
+                                  "imageUrl": "",
+                                  "thumbUrl": "",
+                                  "description": "",
+                                  "fields": [
+                                    {
+                                      "name": "Who Is Applying",
+                                      "value": "${member.displayName}",
+                                      "inline": "false"
+                                    },
+                                    {
+                                      "name": "Why do you want to be a discord helper",
+                                      "value": "${serverVars(\"question1\")}",
+                                      "inline": "false"
+                                    },
+                                    {
+                                      "name": "What can we expect from you as a discord helper?",
+                                      "value": "${serverVars(\"question2\")}",
+                                      "inline": "false"
+                                    },
+                                    {
+                                      "name": "Do you understand the job that could be given to you?",
+                                      "value": "${serverVars(\"question3\")}",
+                                      "inline": "false"
+                                    },
+                                    {
+                                      "name": "What would you do if something happend and you could not control the issue?",
+                                      "value": "${serverVars(\"question4\")}",
+                                      "inline": "false"
+                                    }
+                                  ],
+                                  "author": "",
+                                  "authorUrl": "",
+                                  "authorIcon": "",
+                                  "footerText": "",
+                                  "footerIconUrl": ""
+                                }
+                              ],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "1",
+                              "varName2": "applicationreview",
+                              "name": "Send Message"
+                            },
+                            {
+                              "fromTarget": {
+                                "_index": 1,
+                                "message": "1",
+                                "messageVarName": "applicationreview"
+                              },
+                              "threadName": "Application Review",
+                              "autoArchiveDuration": "10080",
+                              "reason": "",
+                              "storage": "1",
+                              "storageVarName": "appthread",
+                              "name": "Create Thread"
+                            },
+                            {
+                              "storage": "0",
+                              "varName": "",
+                              "reason": "",
+                              "name": "Delete Channel"
+                            },
+                            {
+                              "channel": "5",
+                              "varName": "newapplicationchannel",
+                              "message": "Select a application Status",
+                              "buttons": [],
+                              "selectMenus": [
+                                {
+                                  "placeholder": "Application Stats",
+                                  "id": "msg-select-83acf53",
+                                  "tempVarName": "appstatus",
+                                  "row": "",
+                                  "min": "1",
+                                  "max": "1",
+                                  "mode": "PERSISTENT",
+                                  "time": "",
+                                  "options": [
+                                    {
+                                      "label": "In Review",
+                                      "description": "Application is in review",
+                                      "value": "review",
+                                      "emoji": "",
+                                      "default": "false"
+                                    },
+                                    {
+                                      "label": "Accpeted",
+                                      "description": "Application was accepted.",
+                                      "value": "accepted",
+                                      "emoji": "",
+                                      "default": "false"
+                                    },
+                                    {
+                                      "label": "Denied",
+                                      "description": "Application Was Denied",
+                                      "value": "denied",
+                                      "emoji": "",
+                                      "default": "false"
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "storage": "1",
+                                      "varName": "appstatus",
+                                      "branches": [
+                                        {
+                                          "comparison": "1",
+                                          "value": "review",
+                                          "actions": [
+                                            {
+                                              "channel": "0",
+                                              "varName": "",
+                                              "message": "",
+                                              "buttons": [],
+                                              "selectMenus": [],
+                                              "attachments": [],
+                                              "embeds": [
+                                                {
+                                                  "title": "Application Stats",
+                                                  "url": "",
+                                                  "color": "",
+                                                  "timestamp": "false",
+                                                  "imageUrl": "",
+                                                  "thumbUrl": "",
+                                                  "description": "",
+                                                  "fields": [
+                                                    {
+                                                      "name": "Review",
+                                                      "value": "This application is under review.",
+                                                      "inline": "false"
+                                                    }
+                                                  ],
+                                                  "author": "",
+                                                  "authorUrl": "",
+                                                  "authorIcon": "",
+                                                  "footerText": "",
+                                                  "footerIconUrl": ""
+                                                }
+                                              ],
+                                              "reply": true,
+                                              "ephemeral": false,
+                                              "tts": false,
+                                              "overwrite": false,
+                                              "dontSend": false,
+                                              "editMessage": "0",
+                                              "editMessageVarName": "",
+                                              "storage": "0",
+                                              "varName2": "",
+                                              "name": "Send Message"
+                                            },
+                                            {
+                                              "channel": "0",
+                                              "channelVarName": "",
+                                              "channelName": "Review - ${globalVars(\"userdisplayname\")}",
+                                              "reason": "",
+                                              "channelEdits": {
+                                                "_index": 0,
+                                                "topic": "",
+                                                "categoryID": "1075294215162044436",
+                                                "slowmode": "",
+                                                "position": ""
+                                              },
+                                              "name": "Edit Any Channel"
+                                            },
+                                            {
+                                              "channel": "100",
+                                              "varName": "${globalVars(\"userdisplayname\")}",
+                                              "message": "",
+                                              "buttons": [],
+                                              "selectMenus": [],
+                                              "attachments": [],
+                                              "embeds": [
+                                                {
+                                                  "title": "Application Status",
+                                                  "url": "https://cloverkingdom.org",
+                                                  "color": "",
+                                                  "timestamp": "true",
+                                                  "imageUrl": "",
+                                                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                                                  "description": "",
+                                                  "fields": [
+                                                    {
+                                                      "name": "Your Application For Discord Helper",
+                                                      "value": "Is under review please allow us up to 1 week to make a choice.",
+                                                      "inline": "false"
+                                                    }
+                                                  ],
+                                                  "author": "",
+                                                  "authorUrl": "",
+                                                  "authorIcon": "",
+                                                  "footerText": "",
+                                                  "footerIconUrl": ""
+                                                }
+                                              ],
+                                              "reply": true,
+                                              "ephemeral": true,
+                                              "tts": false,
+                                              "overwrite": false,
+                                              "dontSend": false,
+                                              "editMessage": "0",
+                                              "editMessageVarName": "",
+                                              "storage": "0",
+                                              "varName2": "",
+                                              "name": "Send Message"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "comparison": "1",
+                                          "value": "accepted",
+                                          "actions": [
+                                            {
+                                              "channel": "0",
+                                              "varName": "newapplicationchannel",
+                                              "message": "",
+                                              "buttons": [],
+                                              "selectMenus": [],
+                                              "attachments": [],
+                                              "embeds": [
+                                                {
+                                                  "title": "Application Status",
+                                                  "url": "",
+                                                  "color": "",
+                                                  "timestamp": "false",
+                                                  "imageUrl": "",
+                                                  "thumbUrl": "",
+                                                  "description": "",
+                                                  "fields": [
+                                                    {
+                                                      "name": "Accepted",
+                                                      "value": "This application was accepted.",
+                                                      "inline": "false"
+                                                    }
+                                                  ],
+                                                  "author": "",
+                                                  "authorUrl": "",
+                                                  "authorIcon": "",
+                                                  "footerText": "",
+                                                  "footerIconUrl": ""
+                                                }
+                                              ],
+                                              "reply": true,
+                                              "ephemeral": false,
+                                              "tts": false,
+                                              "overwrite": false,
+                                              "dontSend": false,
+                                              "editMessage": "0",
+                                              "editMessageVarName": "",
+                                              "storage": "0",
+                                              "varName2": "",
+                                              "name": "Send Message"
+                                            },
+                                            {
+                                              "channel": "0",
+                                              "channelVarName": "newapplicationchannel",
+                                              "channelName": "accepted - ${globalVars(\"userdisplayname\")}",
+                                              "reason": "",
+                                              "channelEdits": {
+                                                "_index": 0,
+                                                "topic": "",
+                                                "categoryID": "1075293531050102784",
+                                                "slowmode": "",
+                                                "position": ""
+                                              },
+                                              "name": "Edit Any Channel"
+                                            },
+                                            {
+                                              "channel": "100",
+                                              "varName": "${globalVars(\"userdisplayname\")}",
+                                              "message": "",
+                                              "buttons": [],
+                                              "selectMenus": [],
+                                              "attachments": [],
+                                              "embeds": [
+                                                {
+                                                  "title": "Application Status",
+                                                  "url": "https://cloverkingdom.org",
+                                                  "color": "",
+                                                  "timestamp": "true",
+                                                  "imageUrl": "",
+                                                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                                                  "description": "",
+                                                  "fields": [
+                                                    {
+                                                      "name": "Your Application For Discord Helper",
+                                                      "value": "Great News You Got The Job! Please report to augesrob#0001.",
+                                                      "inline": "false"
+                                                    }
+                                                  ],
+                                                  "author": "",
+                                                  "authorUrl": "",
+                                                  "authorIcon": "",
+                                                  "footerText": "",
+                                                  "footerIconUrl": ""
+                                                }
+                                              ],
+                                              "reply": true,
+                                              "ephemeral": true,
+                                              "tts": false,
+                                              "overwrite": false,
+                                              "dontSend": false,
+                                              "editMessage": "0",
+                                              "editMessageVarName": "",
+                                              "storage": "0",
+                                              "varName2": "",
+                                              "name": "Send Message"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "comparison": "1",
+                                          "value": "denied",
+                                          "actions": [
+                                            {
+                                              "channel": "0",
+                                              "varName": "newapplicationchannel",
+                                              "message": "",
+                                              "buttons": [],
+                                              "selectMenus": [],
+                                              "attachments": [],
+                                              "embeds": [
+                                                {
+                                                  "title": "Application Status",
+                                                  "url": "",
+                                                  "color": "",
+                                                  "timestamp": "false",
+                                                  "imageUrl": "",
+                                                  "thumbUrl": "",
+                                                  "description": "",
+                                                  "fields": [
+                                                    {
+                                                      "name": "Denied",
+                                                      "value": "This application was denied.",
+                                                      "inline": "false"
+                                                    }
+                                                  ],
+                                                  "author": "",
+                                                  "authorUrl": "",
+                                                  "authorIcon": "",
+                                                  "footerText": "",
+                                                  "footerIconUrl": ""
+                                                }
+                                              ],
+                                              "reply": true,
+                                              "ephemeral": false,
+                                              "tts": false,
+                                              "overwrite": false,
+                                              "dontSend": false,
+                                              "editMessage": "0",
+                                              "editMessageVarName": "",
+                                              "storage": "0",
+                                              "varName2": "",
+                                              "name": "Send Message"
+                                            },
+                                            {
+                                              "channel": "0",
+                                              "channelVarName": "newapplicationchannel",
+                                              "channelName": "denied - ${globalVars(\"userdisplayname\")}",
+                                              "reason": "",
+                                              "channelEdits": {
+                                                "_index": 0,
+                                                "topic": "",
+                                                "categoryID": "1075293531050102784",
+                                                "slowmode": "",
+                                                "position": ""
+                                              },
+                                              "name": "Edit Any Channel"
+                                            },
+                                            {
+                                              "channel": "100",
+                                              "varName": "${globalVars(\"userdisplayname\")}",
+                                              "message": "",
+                                              "buttons": [],
+                                              "selectMenus": [],
+                                              "attachments": [],
+                                              "embeds": [
+                                                {
+                                                  "title": "Application Status",
+                                                  "url": "https://cloverkingdom.org",
+                                                  "color": "",
+                                                  "timestamp": "true",
+                                                  "imageUrl": "",
+                                                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                                                  "description": "",
+                                                  "fields": [
+                                                    {
+                                                      "name": "Your Application For Discord Helper",
+                                                      "value": "Bummer, Your application was denied. Please contact augesrob if you want to know why.",
+                                                      "inline": "false"
+                                                    }
+                                                  ],
+                                                  "author": "",
+                                                  "authorUrl": "",
+                                                  "authorIcon": "",
+                                                  "footerText": "",
+                                                  "footerIconUrl": ""
+                                                }
+                                              ],
+                                              "reply": true,
+                                              "ephemeral": true,
+                                              "tts": false,
+                                              "overwrite": false,
+                                              "dontSend": false,
+                                              "editMessage": "0",
+                                              "editMessageVarName": "",
+                                              "storage": "0",
+                                              "varName2": "",
+                                              "name": "Send Message"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "name": "Multi-Check Variable"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "attachments": [],
+                              "embeds": [],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "0",
+                              "varName2": "",
+                              "name": "Send Message"
+                            }
+                          ]
+                        }
+                      ],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "FAQ",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "",
+                          "fields": [
+                            {
+                              "name": "Need To Change Something?",
+                              "value": "Click on the question and type in chat to edit your anwer and click review",
+                              "inline": "false"
+                            },
+                            {
+                              "name": "Ready To Submit?",
+                              "value": "Just click the Submit button",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        },
+                        {
+                          "title": "Discord Helper",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "",
+                          "fields": [
+                            {
+                              "name": "Why do you want to be a discord helper",
+                              "value": "${serverVars(\"question1\")}",
+                              "inline": "false"
+                            },
+                            {
+                              "name": "What can we expect from you as a discord helper?",
+                              "value": "${serverVars(\"question2\")}",
+                              "inline": "false"
+                            },
+                            {
+                              "name": "Do you understand the job that could be given to you?",
+                              "value": "${serverVars(\"question3\")}",
+                              "inline": "false"
+                            },
+                            {
+                              "name": "What would you do if something happend and you could not control the issue?",
+                              "value": "${serverVars(\"question4\")}",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                }
+              ],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "name": "Minecraft Mod",
+          "type": "PRIMARY",
+          "id": "msg-button-a928b85",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "${tempVars(\"discordhelper\")}",
+              "message": "",
+              "buttons": [
+                {
+                  "name": "Question 1",
+                  "type": "PRIMARY",
+                  "id": "msg-button-6937aa7",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": [
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Question 1",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "You have 1 Minute until this command times out",
+                          "fields": [
+                            {
+                              "name": "Type in chat to respond",
+                              "value": "Why do you want to be a Minecraft Moderator?",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    },
+                    {
+                      "storage": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "filter": "content.length > 0 && author.id === user.id",
+                      "max": "1",
+                      "time": "60000",
+                      "iftrue": "1",
+                      "iftrueVal": "",
+                      "iffalse": "0",
+                      "iffalseVal": "",
+                      "storage2": "2",
+                      "varName2": "question1",
+                      "name": "Await Response Call Action"
+                    },
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Application Timed Out",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "Select the button you again if you want to keep going.",
+                          "fields": [
+                            {
+                              "name": "Timed Out",
+                              "value": "1 Minute has passed and we timed out the application",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                },
+                {
+                  "name": "Question 2",
+                  "type": "PRIMARY",
+                  "id": "msg-button-a2e99c8",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": [
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Question 2",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "You have 1 Minute until this command times out",
+                          "fields": [
+                            {
+                              "name": "Type in chat to respond",
+                              "value": "You see someone talking about another server what would you do?",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    },
+                    {
+                      "storage": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "filter": "content.length > 0 && author.id === user.id",
+                      "max": "1",
+                      "time": "60000",
+                      "iftrue": "1",
+                      "iftrueVal": "",
+                      "iffalse": "0",
+                      "iffalseVal": "",
+                      "storage2": "2",
+                      "varName2": "question2",
+                      "name": "Await Response Call Action"
+                    },
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Application Timed Out",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "Select the button you again if you want to keep going.",
+                          "fields": [
+                            {
+                              "name": "Timed Out",
+                              "value": "1 Minute has passed and we timed out the application",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                },
+                {
+                  "name": "Question 3",
+                  "type": "PRIMARY",
+                  "id": "msg-button-587ef13",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": [
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Question 3",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "You have 1 Minute until this command times out",
+                          "fields": [
+                            {
+                              "name": "Type in chat to respond",
+                              "value": "Do you understand the job that could be given to you?",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    },
+                    {
+                      "storage": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "filter": "content.length > 0 && author.id === user.id",
+                      "max": "1",
+                      "time": "60000",
+                      "iftrue": "1",
+                      "iftrueVal": "",
+                      "iffalse": "0",
+                      "iffalseVal": "",
+                      "storage2": "2",
+                      "varName2": "question3",
+                      "name": "Await Response Call Action"
+                    },
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Application Timed Out",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "Select the button you again if you want to keep going.",
+                          "fields": [
+                            {
+                              "name": "Timed Out",
+                              "value": "1 Minute has passed and we timed out the application",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                },
+                {
+                  "name": "Question 4",
+                  "type": "PRIMARY",
+                  "id": "msg-button-9558c18",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": [
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Question 4",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "You have 1 Minute until this command times out",
+                          "fields": [
+                            {
+                              "name": "Type in chat to respond",
+                              "value": "What would you do if something happend and you could not control the issue?",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    },
+                    {
+                      "storage": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "filter": "content.length > 0 && author.id === user.id",
+                      "max": "1",
+                      "time": "60000",
+                      "iftrue": "1",
+                      "iftrueVal": "",
+                      "iffalse": "0",
+                      "iffalseVal": "",
+                      "storage2": "2",
+                      "varName2": "question4",
+                      "name": "Await Response Call Action"
+                    },
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Application Timed Out",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "Select the button you again if you want to keep going.",
+                          "fields": [
+                            {
+                              "name": "Timed Out",
+                              "value": "1 Minute has passed and we timed out the application",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                },
+                {
+                  "name": "Question 5",
+                  "type": "PRIMARY",
+                  "id": "msg-button-f2e3ffa",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": [
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Question 5",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "You have 1 Minute until this command times out",
+                          "fields": [
+                            {
+                              "name": "Type in chat to respond",
+                              "value": "How often are you on our server?",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    },
+                    {
+                      "storage": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "filter": "content.length > 0 && author.id === user.id",
+                      "max": "1",
+                      "time": "60000",
+                      "iftrue": "1",
+                      "iftrueVal": "",
+                      "iffalse": "0",
+                      "iffalseVal": "",
+                      "storage2": "2",
+                      "varName2": "question5",
+                      "name": "Await Response Call Action"
+                    },
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Application Timed Out",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "Select the button you again if you want to keep going.",
+                          "fields": [
+                            {
+                              "name": "Timed Out",
+                              "value": "1 Minute has passed and we timed out the application",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                },
+                {
+                  "name": "Question 6",
+                  "type": "PRIMARY",
+                  "id": "msg-button-ef2499f",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": [
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Question 6",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "You have 1 Minute until this command times out",
+                          "fields": [
+                            {
+                              "name": "Type in chat to respond",
+                              "value": "Do you know all of the discord and server rules and do you follow all of them?",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    },
+                    {
+                      "storage": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "filter": "content.length > 0 && author.id === user.id",
+                      "max": "1",
+                      "time": "60000",
+                      "iftrue": "1",
+                      "iftrueVal": "",
+                      "iffalse": "0",
+                      "iffalseVal": "",
+                      "storage2": "2",
+                      "varName2": "question6",
+                      "name": "Await Response Call Action"
+                    },
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Application Timed Out",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "Select the button you again if you want to keep going.",
+                          "fields": [
+                            {
+                              "name": "Timed Out",
+                              "value": "1 Minute has passed and we timed out the application",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                },
+                {
+                  "name": "Question 7",
+                  "type": "PRIMARY",
+                  "id": "msg-button-bd9c28a",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": [
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Question 7",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "You have 1 Minute until this command times out",
+                          "fields": [
+                            {
+                              "name": "Type in chat to respond",
+                              "value": "What would you do if something happend and you could not control the issue?",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    },
+                    {
+                      "storage": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "filter": "content.length > 0 && author.id === user.id",
+                      "max": "1",
+                      "time": "60000",
+                      "iftrue": "1",
+                      "iftrueVal": "",
+                      "iffalse": "0",
+                      "iffalseVal": "",
+                      "storage2": "2",
+                      "varName2": "question7",
+                      "name": "Await Response Call Action"
+                    },
+                    {
+                      "channel": "0",
+                      "varName": "${tempVars(\"jobboardchannel\")}",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Application Timed Out",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "Select the button you again if you want to keep going.",
+                          "fields": [
+                            {
+                              "name": "Timed Out",
+                              "value": "1 Minute has passed and we timed out the application",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                },
+                {
+                  "name": "Review Application",
+                  "type": "PRIMARY",
+                  "id": "msg-button-1477470",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": [
+                    {
+                      "channel": "0",
+                      "varName": "",
+                      "message": "",
+                      "buttons": [
+                        {
+                          "name": "Submit Application",
+                          "type": "PRIMARY",
+                          "id": "msg-button-2a75c97",
+                          "row": "",
+                          "url": "",
+                          "emoji": "",
+                          "mode": "PERSISTENT",
+                          "time": "",
+                          "actions": [
+                            {
+                              "channelName": " ${globalVars(\"userdisplayname\")} - Application",
+                              "topic": "",
+                              "position": "",
+                              "storage": "1",
+                              "varName": "newapplicationchannel",
+                              "categoryID": "1075294215162044436",
+                              "reason": "",
+                              "name": "Create Text Channel"
+                            },
+                            {
+                              "channel": "5",
+                              "varName": "newapplicationchannel",
+                              "message": "",
+                              "buttons": [],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [
+                                {
+                                  "title": "Minecraft Moderator Application",
+                                  "url": "",
+                                  "color": "",
+                                  "timestamp": "false",
+                                  "imageUrl": "",
+                                  "thumbUrl": "",
+                                  "description": "",
+                                  "fields": [
+                                    {
+                                      "name": "Who Is Applying",
+                                      "value": "${globalVars(\"userdisplayname\")}",
+                                      "inline": "false"
+                                    },
+                                    {
+                                      "name": "Why do you want to be a Minecraft Moderator?",
+                                      "value": "${serverVars(\"question1\")}",
+                                      "inline": "false"
+                                    },
+                                    {
+                                      "name": "You see someone talking about another server what would you do?",
+                                      "value": "${serverVars(\"question2\")}",
+                                      "inline": "false"
+                                    },
+                                    {
+                                      "name": "Do you understand the job that could be given to you?",
+                                      "value": "${serverVars(\"question3\")}",
+                                      "inline": "false"
+                                    },
+                                    {
+                                      "name": "What would you do if something happend and you could not control the issue?",
+                                      "value": "${serverVars(\"question4\")}",
+                                      "inline": "false"
+                                    },
+                                    {
+                                      "name": "How often are you on our server?",
+                                      "value": "${serverVars(\"question5\")}",
+                                      "inline": "false"
+                                    },
+                                    {
+                                      "name": "Do you know all of the discord and server rules and do you follow all of them?",
+                                      "value": "${serverVars(\"question6\")}",
+                                      "inline": "false"
+                                    },
+                                    {
+                                      "name": "What would you do if something happend and you could not control the issue?",
+                                      "value": "${serverVars(\"question7\")}",
+                                      "inline": "false"
+                                    }
+                                  ],
+                                  "author": "",
+                                  "authorUrl": "",
+                                  "authorIcon": "",
+                                  "footerText": "",
+                                  "footerIconUrl": ""
+                                }
+                              ],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "1",
+                              "varName2": "applicationreview",
+                              "name": "Send Message"
+                            },
+                            {
+                              "fromTarget": {
+                                "_index": 1,
+                                "message": "1",
+                                "messageVarName": "applicationreview"
+                              },
+                              "threadName": "Application Review",
+                              "autoArchiveDuration": "10080",
+                              "reason": "",
+                              "storage": "1",
+                              "storageVarName": "appthread",
+                              "name": "Create Thread"
+                            },
+                            {
+                              "storage": "0",
+                              "varName": "",
+                              "reason": "",
+                              "name": "Delete Channel"
+                            },
+                            {
+                              "channel": "5",
+                              "varName": "newapplicationchannel",
+                              "message": "Select a application Status",
+                              "buttons": [],
+                              "selectMenus": [
+                                {
+                                  "placeholder": "Application Stats",
+                                  "id": "msg-select-2a3a9c7",
+                                  "tempVarName": "appstatus",
+                                  "row": "",
+                                  "min": "1",
+                                  "max": "1",
+                                  "mode": "PERSISTENT",
+                                  "time": "",
+                                  "options": [
+                                    {
+                                      "label": "In Review",
+                                      "description": "Application is in review",
+                                      "value": "review",
+                                      "emoji": "",
+                                      "default": "false"
+                                    },
+                                    {
+                                      "label": "Accpeted",
+                                      "description": "Application was accepted.",
+                                      "value": "accepted",
+                                      "emoji": "",
+                                      "default": "false"
+                                    },
+                                    {
+                                      "label": "Denied",
+                                      "description": "Application Was Denied",
+                                      "value": "denied",
+                                      "emoji": "",
+                                      "default": "false"
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "storage": "1",
+                                      "varName": "appstatus",
+                                      "branches": [
+                                        {
+                                          "comparison": "1",
+                                          "value": "review",
+                                          "actions": [
+                                            {
+                                              "channel": "0",
+                                              "varName": "",
+                                              "message": "",
+                                              "buttons": [],
+                                              "selectMenus": [],
+                                              "attachments": [],
+                                              "embeds": [
+                                                {
+                                                  "title": "Application Stats",
+                                                  "url": "",
+                                                  "color": "",
+                                                  "timestamp": "false",
+                                                  "imageUrl": "",
+                                                  "thumbUrl": "",
+                                                  "description": "",
+                                                  "fields": [
+                                                    {
+                                                      "name": "Review",
+                                                      "value": "This application is under review.",
+                                                      "inline": "false"
+                                                    }
+                                                  ],
+                                                  "author": "",
+                                                  "authorUrl": "",
+                                                  "authorIcon": "",
+                                                  "footerText": "",
+                                                  "footerIconUrl": ""
+                                                }
+                                              ],
+                                              "reply": true,
+                                              "ephemeral": false,
+                                              "tts": false,
+                                              "overwrite": false,
+                                              "dontSend": false,
+                                              "editMessage": "0",
+                                              "editMessageVarName": "",
+                                              "storage": "0",
+                                              "varName2": "",
+                                              "name": "Send Message"
+                                            },
+                                            {
+                                              "channel": "0",
+                                              "channelVarName": "",
+                                              "channelName": "Review - ${globalVars(\"userdisplayname\")}",
+                                              "reason": "",
+                                              "channelEdits": {
+                                                "_index": 0,
+                                                "topic": "",
+                                                "categoryID": "1075294215162044436",
+                                                "slowmode": "",
+                                                "position": ""
+                                              },
+                                              "name": "Edit Any Channel"
+                                            },
+                                            {
+                                              "channel": "100",
+                                              "varName": "${globalVars(\"userdisplayname\")}",
+                                              "message": "",
+                                              "buttons": [],
+                                              "selectMenus": [],
+                                              "attachments": [],
+                                              "embeds": [
+                                                {
+                                                  "title": "Application Status",
+                                                  "url": "https://cloverkingdom.org",
+                                                  "color": "",
+                                                  "timestamp": "true",
+                                                  "imageUrl": "",
+                                                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                                                  "description": "",
+                                                  "fields": [
+                                                    {
+                                                      "name": "Your Application For Minecraft Moderator",
+                                                      "value": "Is under review please allow us up to 1 week to make a choice.",
+                                                      "inline": "false"
+                                                    }
+                                                  ],
+                                                  "author": "",
+                                                  "authorUrl": "",
+                                                  "authorIcon": "",
+                                                  "footerText": "",
+                                                  "footerIconUrl": ""
+                                                }
+                                              ],
+                                              "reply": true,
+                                              "ephemeral": true,
+                                              "tts": false,
+                                              "overwrite": false,
+                                              "dontSend": false,
+                                              "editMessage": "0",
+                                              "editMessageVarName": "",
+                                              "storage": "0",
+                                              "varName2": "",
+                                              "name": "Send Message"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "comparison": "1",
+                                          "value": "accepted",
+                                          "actions": [
+                                            {
+                                              "channel": "0",
+                                              "varName": "newapplicationchannel",
+                                              "message": "",
+                                              "buttons": [],
+                                              "selectMenus": [],
+                                              "attachments": [],
+                                              "embeds": [
+                                                {
+                                                  "title": "Application Status",
+                                                  "url": "",
+                                                  "color": "",
+                                                  "timestamp": "false",
+                                                  "imageUrl": "",
+                                                  "thumbUrl": "",
+                                                  "description": "",
+                                                  "fields": [
+                                                    {
+                                                      "name": "Accepted",
+                                                      "value": "This application was accepted.",
+                                                      "inline": "false"
+                                                    }
+                                                  ],
+                                                  "author": "",
+                                                  "authorUrl": "",
+                                                  "authorIcon": "",
+                                                  "footerText": "",
+                                                  "footerIconUrl": ""
+                                                }
+                                              ],
+                                              "reply": true,
+                                              "ephemeral": false,
+                                              "tts": false,
+                                              "overwrite": false,
+                                              "dontSend": false,
+                                              "editMessage": "0",
+                                              "editMessageVarName": "",
+                                              "storage": "0",
+                                              "varName2": "",
+                                              "name": "Send Message"
+                                            },
+                                            {
+                                              "channel": "0",
+                                              "channelVarName": "newapplicationchannel",
+                                              "channelName": "accepted - ${globalVars(\"userdisplayname\")}",
+                                              "reason": "",
+                                              "channelEdits": {
+                                                "_index": 0,
+                                                "topic": "",
+                                                "categoryID": "1075293531050102784",
+                                                "slowmode": "",
+                                                "position": ""
+                                              },
+                                              "name": "Edit Any Channel"
+                                            },
+                                            {
+                                              "channel": "100",
+                                              "varName": "${globalVars(\"userdisplayname\")}",
+                                              "message": "",
+                                              "buttons": [],
+                                              "selectMenus": [],
+                                              "attachments": [],
+                                              "embeds": [
+                                                {
+                                                  "title": "Application Status",
+                                                  "url": "https://cloverkingdom.org",
+                                                  "color": "",
+                                                  "timestamp": "true",
+                                                  "imageUrl": "",
+                                                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                                                  "description": "",
+                                                  "fields": [
+                                                    {
+                                                      "name": "Your Application For Minecraft Moderator",
+                                                      "value": "Great News You Got The JOB!!! Contact augesrob#0001 for more information.",
+                                                      "inline": "false"
+                                                    }
+                                                  ],
+                                                  "author": "",
+                                                  "authorUrl": "",
+                                                  "authorIcon": "",
+                                                  "footerText": "",
+                                                  "footerIconUrl": ""
+                                                }
+                                              ],
+                                              "reply": true,
+                                              "ephemeral": true,
+                                              "tts": false,
+                                              "overwrite": false,
+                                              "dontSend": false,
+                                              "editMessage": "0",
+                                              "editMessageVarName": "",
+                                              "storage": "0",
+                                              "varName2": "",
+                                              "name": "Send Message"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "comparison": "1",
+                                          "value": "denied",
+                                          "actions": [
+                                            {
+                                              "channel": "0",
+                                              "varName": "newapplicationchannel",
+                                              "message": "",
+                                              "buttons": [],
+                                              "selectMenus": [],
+                                              "attachments": [],
+                                              "embeds": [
+                                                {
+                                                  "title": "Application Status",
+                                                  "url": "",
+                                                  "color": "",
+                                                  "timestamp": "false",
+                                                  "imageUrl": "",
+                                                  "thumbUrl": "",
+                                                  "description": "",
+                                                  "fields": [
+                                                    {
+                                                      "name": "Accepted",
+                                                      "value": "This application was denied.",
+                                                      "inline": "false"
+                                                    }
+                                                  ],
+                                                  "author": "",
+                                                  "authorUrl": "",
+                                                  "authorIcon": "",
+                                                  "footerText": "",
+                                                  "footerIconUrl": ""
+                                                }
+                                              ],
+                                              "reply": true,
+                                              "ephemeral": false,
+                                              "tts": false,
+                                              "overwrite": false,
+                                              "dontSend": false,
+                                              "editMessage": "0",
+                                              "editMessageVarName": "",
+                                              "storage": "0",
+                                              "varName2": "",
+                                              "name": "Send Message"
+                                            },
+                                            {
+                                              "channel": "0",
+                                              "channelVarName": "newapplicationchannel",
+                                              "channelName": "denied - ${globalVars(\"userdisplayname\")}",
+                                              "reason": "",
+                                              "channelEdits": {
+                                                "_index": 0,
+                                                "topic": "",
+                                                "categoryID": "1075293531050102784",
+                                                "slowmode": "",
+                                                "position": ""
+                                              },
+                                              "name": "Edit Any Channel"
+                                            },
+                                            {
+                                              "channel": "100",
+                                              "varName": "${globalVars(\"userdisplayname\")}",
+                                              "message": "",
+                                              "buttons": [],
+                                              "selectMenus": [],
+                                              "attachments": [],
+                                              "embeds": [
+                                                {
+                                                  "title": "Application Status",
+                                                  "url": "https://cloverkingdom.org",
+                                                  "color": "",
+                                                  "timestamp": "true",
+                                                  "imageUrl": "",
+                                                  "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+                                                  "description": "",
+                                                  "fields": [
+                                                    {
+                                                      "name": "Your Application For Minecraft Moderator",
+                                                      "value": "Bummer, Your application was denied. If you want to know more please contact augesrob#0001",
+                                                      "inline": "false"
+                                                    }
+                                                  ],
+                                                  "author": "",
+                                                  "authorUrl": "",
+                                                  "authorIcon": "",
+                                                  "footerText": "",
+                                                  "footerIconUrl": ""
+                                                }
+                                              ],
+                                              "reply": true,
+                                              "ephemeral": true,
+                                              "tts": false,
+                                              "overwrite": false,
+                                              "dontSend": false,
+                                              "editMessage": "0",
+                                              "editMessageVarName": "",
+                                              "storage": "0",
+                                              "varName2": "",
+                                              "name": "Send Message"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "name": "Multi-Check Variable"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "attachments": [],
+                              "embeds": [],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "0",
+                              "varName2": "",
+                              "name": "Send Message"
+                            }
+                          ]
+                        }
+                      ],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "FAQ",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "",
+                          "fields": [
+                            {
+                              "name": "Need To Change Something?",
+                              "value": "Click on the question and type in chat to edit your anwer and click review",
+                              "inline": "false"
+                            },
+                            {
+                              "name": "Ready To Submit?",
+                              "value": "Just click the Submit button",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        },
+                        {
+                          "title": "Minecraft Moderator",
+                          "url": "",
+                          "color": "",
+                          "timestamp": "false",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "",
+                          "fields": [
+                            {
+                              "name": "Why do you want to be a Minecraft Moderator?",
+                              "value": "${serverVars(\"question1\")}",
+                              "inline": "false"
+                            },
+                            {
+                              "name": "You see someone talking about another server what would you do?",
+                              "value": "${serverVars(\"question2\")}",
+                              "inline": "false"
+                            },
+                            {
+                              "name": "Do you understand the job that could be given to you?",
+                              "value": "${serverVars(\"question3\")}",
+                              "inline": "false"
+                            },
+                            {
+                              "name": "What would you do if something happend and you could not control the issue?",
+                              "value": "${serverVars(\"question4\")}",
+                              "inline": "false"
+                            },
+                            {
+                              "name": "How often are you on our server?",
+                              "value": "${serverVars(\"question5\")}",
+                              "inline": "false"
+                            },
+                            {
+                              "name": "Do you know all of the discord and server rules and do you follow all of them?",
+                              "value": "${serverVars(\"question6\")}",
+                              "inline": "false"
+                            },
+                            {
+                              "name": "What would you do if something happend and you could not control the issue?",
+                              "value": "${serverVars(\"question7\")}",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                }
+              ],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Applying a staff",
+          "url": "",
+          "color": "8b00ff",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+          "description": "",
+          "fields": [
+            {
+              "name": "Which Job You Looking for",
+              "value": "Pressing a button below will should start the application proccess\n",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "Copyright 2022-2023",
+          "footerIconUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "source": "cvUJm",
+      "type": "false",
+      "name": "Call Command/Event"
+    }
+  ],
+  "comType": "4",
+  "parameters": [],
+  "description": "Run this command first and enter channel"
+}
