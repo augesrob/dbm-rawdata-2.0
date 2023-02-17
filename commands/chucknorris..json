@@ -1,0 +1,58 @@
+{
+  "name": "Chucknorris",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.chucknorris.io/jokes/random",
+      "path": "value",
+      "storage": "1",
+      "varName": "joke",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Bad Chuck Norris Joke...",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+          "description": "${tempVars(\"joke\")}",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "_id": "UIniQ",
+  "comType": "4",
+  "description": "Chuck Norris Jokes"
+}
