@@ -1,0 +1,240 @@
+{
+  "permissions": "NONE",
+  "restriction": "1",
+  "name": "Serverinfo",
+  "actions": [
+    {
+      "info": "0",
+      "find": "902234112503451675",
+      "storage": "1",
+      "varName": "cloverkingdomteam",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "role": "3",
+      "varName2": "cloverkingdomteam",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "19"
+      },
+      "name": "Check If Member has Role"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "servername",
+      "name": "Store Server Info"
+    },
+    {
+      "info": "11",
+      "storage": "1",
+      "varName2": "owner",
+      "name": "Store Server Info",
+      "varName": "",
+      "server": "0"
+    },
+    {
+      "info": "5",
+      "storage": "1",
+      "varName2": "icon",
+      "name": "Store Server Info",
+      "varName": "",
+      "server": "0"
+    },
+    {
+      "info": "24",
+      "storage": "1",
+      "varName2": "emoji",
+      "name": "Store Server Info",
+      "varName": "",
+      "server": "0"
+    },
+    {
+      "info": "18",
+      "storage": "1",
+      "varName2": "creation",
+      "name": "Store Server Info",
+      "varName": "",
+      "server": "0"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "30",
+      "storage": "1",
+      "varName2": "numberbots",
+      "name": "Store Server Info"
+    },
+    {
+      "info": "37",
+      "storage": "1",
+      "varName2": "rolecount",
+      "name": "Store Server Info",
+      "varName": "",
+      "server": "0"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "35",
+      "storage": "1",
+      "varName2": "numberhumans",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "44",
+      "storage": "1",
+      "varName2": "Boostcount",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "45",
+      "storage": "1",
+      "varName2": "donortier",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "46",
+      "storage": "1",
+      "varName2": "serverbannerurl",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "38",
+      "storage": "1",
+      "varName2": "textchannelcount",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "39",
+      "storage": "1",
+      "varName2": "voicechannelcount",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "serverid",
+      "name": "Store Server Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Server Info",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+          "description": "",
+          "fields": [
+            {
+              "name": "Server Name:",
+              "value": "${tempVars(\"servername\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Server ID:",
+              "value": "${tempVars(\"serverid\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Server Owner",
+              "value": "${tempVars(\"owner\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Number of Roles",
+              "value": "${tempVars(\"rolecount\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Number of Emjoi's",
+              "value": "${tempVars(\"emoji\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Number of Bots",
+              "value": "${tempVars(\"numberbots\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Number of Humans",
+              "value": "${tempVars(\"numberhumans\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Number of Boosts",
+              "value": "${tempVars(\"Boostcount\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Number of Text Channels",
+              "value": "${tempVars(\"textchannelcount\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Number of Voice Channels",
+              "value": "${tempVars(\"voicechannelcount\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Date Created",
+              "value": "${tempVars(\"creation\")}",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"serverbannerurl\")}",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "source": "RDyOJ",
+      "type": "false",
+      "name": "Call Command/Event"
+    }
+  ],
+  "_id": "hZUdf",
+  "comType": "4",
+  "description": "Information about this server"
+}
