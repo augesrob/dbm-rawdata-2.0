@@ -1,0 +1,181 @@
+{
+  "comType": "4",
+  "name": "Userinfo",
+  "permissions": "NONE",
+  "_id": "uwGtd",
+  "actions": [
+    {
+      "info": "0",
+      "find": "902234112503451675",
+      "storage": "1",
+      "varName": "cloverkingdomteam",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "role": "3",
+      "varName2": "cloverkingdomteam",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "13"
+      },
+      "name": "Check If Member has Role"
+    },
+    {
+      "member": "5",
+      "varName": "username",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "username",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "username",
+      "info": "3",
+      "storage": "1",
+      "varName2": "displayname",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "username",
+      "info": "15",
+      "storage": "1",
+      "varName2": "status",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "username",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatarurl",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "username",
+      "info": "17",
+      "storage": "1",
+      "varName2": "rolelist",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "username",
+      "info": "21",
+      "storage": "1",
+      "varName2": "tag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "username",
+      "info": "24",
+      "storage": "1",
+      "varName2": "joindate",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "User Info",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+          "description": "",
+          "fields": [
+            {
+              "name": "Username:",
+              "value": "${tempVars(\"username\")}",
+              "inline": "true"
+            },
+            {
+              "name": "Discord Tag:",
+              "value": "${tempVars(\"tag\")}",
+              "inline": "true"
+            },
+            {
+              "name": "Display Name:",
+              "value": "${tempVars(\"displayname\")}",
+              "inline": "true"
+            },
+            {
+              "name": "Discord ID:",
+              "value": "${tempVars(\"id\")}",
+              "inline": "true"
+            },
+            {
+              "name": "Status:",
+              "value": "${tempVars(\"status\")}",
+              "inline": "true"
+            },
+            {
+              "name": "Roles:",
+              "value": "${tempVars(\"rolelist\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Join date:",
+              "value": "${tempVars(\"joindate\")}",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"avatarurl\")}",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "source": "RDyOJ",
+      "type": "false",
+      "name": "Call Command/Event"
+    }
+  ],
+  "restriction": "1",
+  "parameters": [
+    {
+      "name": "username",
+      "description": "@username",
+      "type": "USER",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Get Discord User Information"
+}
