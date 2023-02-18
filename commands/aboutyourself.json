@@ -1,0 +1,128 @@
+{
+  "name": "aboutyourself",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "0",
+  "_id": "JqNTI",
+  "actions": [
+    {
+      "title": "Profile",
+      "textInputs": [
+        {
+          "name": "Minecraft Username",
+          "placeholder": "Minecraft Username",
+          "minLength": "0",
+          "maxLength": "1000",
+          "id": "mcname",
+          "row": "",
+          "style": "SHORT",
+          "required": "true"
+        },
+        {
+          "name": "Discord Username",
+          "placeholder": "Discord Username",
+          "minLength": "0",
+          "maxLength": "1000",
+          "id": "dcusername",
+          "row": "",
+          "style": "SHORT",
+          "required": "true"
+        },
+        {
+          "name": "Age",
+          "placeholder": "Age",
+          "minLength": "0",
+          "maxLength": "1000",
+          "id": "age",
+          "row": "",
+          "style": "SHORT",
+          "required": "true"
+        },
+        {
+          "name": "Whats Your Goal in Life",
+          "placeholder": "Whats Your Goal in Life",
+          "minLength": "0",
+          "maxLength": "1000",
+          "id": "goals",
+          "row": "",
+          "style": "PARAGRAPH",
+          "required": "true"
+        },
+        {
+          "name": "About Yourself",
+          "placeholder": "About Yourself",
+          "minLength": "0",
+          "maxLength": "1000",
+          "id": "aboutself",
+          "row": "",
+          "style": "PARAGRAPH",
+          "required": "true"
+        }
+      ],
+      "name": "Show Modal"
+    },
+    {
+      "channel": "103",
+      "varName": "1076293887120916610",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "User Profile",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+          "description": "",
+          "fields": [
+            {
+              "name": "Minecraft Username",
+              "value": "${tempVars(\"mcname\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Discord Username",
+              "value": "${tempVars(\"dcusername\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Age",
+              "value": "${tempVars(\"age\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Goals",
+              "value": "${tempVars(\"goals\")}",
+              "inline": "false"
+            },
+            {
+              "name": "About Yourself",
+              "value": "${tempVars(\"aboutself\")}",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Tell Us About Yourself"
+}
